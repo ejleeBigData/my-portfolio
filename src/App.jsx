@@ -1,17 +1,31 @@
-import portfolioData from "./portfolio-data.json";
+import AboutSection from "./components/AboutSection";
+import ExperienceSection from "./components/ExperienceSection";
 import Header from "./components/Header";
-
-/*
-강사님 https://portfolio-eta-sooty-iq9zxp898z.vercel.app/
-*/
+import ProjectsSection from "./components/ProjectsSection";
+import SkillsSection from "./components/SkillsSection";
+import portfolioData from "./portfolio-data.json";
+import WritingSection from "./components/WritingSection";
 
 const App = () => {
   return (
     <div className="min-h-screen">
       <Header profile={portfolioData.profile} />
+      <AboutSection profile={portfolioData.profile} />
+      <SkillsSection skills={portfolioData.skills} />
+      <ProjectsSection projects={portfolioData.projects} />
+      <ExperienceSection
+        experience={portfolioData.experience}
+        education={portfolioData.education}
+        certifications={portfolioData.certifications}
+      />
+      <WritingSection
+        writing={portfolioData.writing}
+        talks={portfolioData.talks}
+        openSource={portfolioData.open_source}
+      />
       <footer className="py-8 px-4 text-center">
         <p className="text-sm">
-          © 2025 {portfolioData.profile.name} All right reserved.
+          © 2025 {portfolioData.profile.name}. All right reserved.
         </p>
       </footer>
     </div>
