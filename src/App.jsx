@@ -7,10 +7,12 @@ import Header from "./components/Header";
 
 const App = () => {
   return (
-    <div className="bg-green-100 min-h-screen">
+    <div className="min-h-screen">
       <Header profile={portfolioData.profile} />
-      <footer className="">
-        <p>© 2025 {portfolioData.profile.name} All right reserved.</p>
+      <footer className="py-8 px-4 text-center">
+        <p className="text-sm">
+          © 2025 {portfolioData.profile.name} All right reserved.
+        </p>
       </footer>
     </div>
   );
