@@ -8,26 +8,27 @@ const AboutSection = ({ profile }) => {
         <h2 className="text-4xl font-bold mb-12 text-center gradient-text">
           About
         </h2>
-      </div>
 
-      <Card size="2" className="glass">
-        <div className="flex items-center gap-2 mb-6">
-          <FaLocationDot />
-          {profile.location}
-        </div>
-
-        <p className="text-lg leading-relaxed mb-6">{profile.summary}</p>
-        <div>
-          <h3 className="mb-4">관심 분야</h3>
-          <div className="flex flex-wrap gap-2">
-            {profile.interests.map((interest, index) => (
-              <Badge key={index} variant="secondary">
-                {interest}
-              </Badge>
-            ))}
+        <Card size="3" className="glass">
+          <div className="flex items-center gap-2 mb-6">
+            <FaLocationDot className="w-4 h-4" />
+            {profile.location}
           </div>
-        </div>
-      </Card>
+
+          <p className="text-lg leading-relaxed mb-6">{profile.summary}</p>
+
+          <div>
+            <h3 className="mb-4">관심 분야</h3>
+            <div className="flex flex-wrap gap-2">
+              {profile.interests.map((interest, index) => (
+                <Badge key={index} variant="secondary">
+                  {interest}
+                </Badge>
+              ))}
+            </div>
+          </div>
+        </Card>
+      </div>
     </section>
   );
 };
